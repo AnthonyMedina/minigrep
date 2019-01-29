@@ -60,7 +60,7 @@ fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
 
     contents
         .lines()
-        .filter(|line| line.contains(&query))
+        .filter(|line| line.to_lowercase().contains(&query))
         .collect()
 }
 
